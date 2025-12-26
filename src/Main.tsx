@@ -98,8 +98,14 @@ export default function Main() {
   const iceServers = [
     {
       urls: 'stun:stun.l.google.com:19302',
-    }
+    },
+    {
+      urls: 'turn:test.xxxx.com:3478',
+      username: '',
+      credential: '',
+    },
   ];
+
 
   const createSendTransport = async () => {
     socket?.emit(
